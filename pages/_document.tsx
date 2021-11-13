@@ -4,20 +4,17 @@ import React from "react";
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
+
   static getInitialProps({ renderPage }) {
-    // Step 1: Create an instance of ServerStyleSheet
     const sheet = new ServerStyleSheet();
 
-    // Step 2: Retrieve styles from components in the page
     const page = renderPage(
       (App: any) => (props: any) => sheet.collectStyles(<App {...props} />)
     );
 
-    // Step 3: Extract the styles as <style> tags
     const styleTags = sheet.getStyleElement();
 
-    // Step 4: Pass styleTags as a prop
-    return { ...page, styleTags };
+    return { ...page, children: styleTags };
   }
 
   render() {
@@ -25,7 +22,7 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           {/* Step 5: Output the styles in the head  */}
-          {this.props.styleTags}
+          {this.props.children}
         </Head>
         <body>
           <Main />
