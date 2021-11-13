@@ -10,10 +10,18 @@ export const Container = styled.div`
   color: white;
 `;
 
-export const HeaderLinks = styled.a`
+export const FooterName = styled.p`
+  padding: 20px;
+  text-decoration: none;
+  color: #fff !important;
+  font-family: "Blatant";
+  font-size: 25px;
+`;
+
+
+export const FooterLinks = styled.a`
   padding: 15px;
   text-decoration: none;
   color: #fff !important;
   font-family: 'Blatant';
-
 `;

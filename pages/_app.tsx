@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { Footer } from '../components/Footer';
+import { Footer } from '../components/Footer/Footer';
 import { globals } from '../globals';
 import { Header } from '../components/Header/Header';
 import '../styles/base.css';
