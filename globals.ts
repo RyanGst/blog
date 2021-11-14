@@ -7,5 +7,5 @@ export namespace globals {
   export const email = 'ryan.professional.md@gmail.com';
   export const url = 'https://alyssaphacker.com';
   export const accentColor = '#fc7f03';
-  export const googleAnalyticsId = ``; // e.g. 'UA-999999999-1'
+  export const googleAnalyticsId = `G-L72S2RTPW9`; // e.g. 'UA-999999999-1'
 }
