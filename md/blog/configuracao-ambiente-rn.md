@@ -15,7 +15,7 @@ canonicalUrl: https://ryangst.me/blog/configuracao-ambiente-rn
 
 O objetivo desse documento é cobrir um passo a passo de como configurar as ferramentas de desenvolvimento e debug para React Native.
 
-> Para configurar o seu sistema para executar aplicações React Native iOS é necessário um sistema com MacOS. **Não é possível configurar um ambiente IOS no Windows/Linux**
+> Para configurar o seu sistema para executar aplicações React Native iOS é necessário um sistema com MacOS. **Atualmente, não é possível configurar um ambiente IOS no Windows/Linux de maneira nativa**
 
 
 ## Dependências
