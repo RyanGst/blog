@@ -8,7 +8,7 @@ tags:
 authorPhoto: /img/profile.png
 bannerPhoto: /img/screenshot.png
 thumbnailPhoto: /img/screenshot.png
-canonicalUrl: https://devii.dev/blog/dan-abramov
+canonicalUrl: https://ryangst.me/blog/first-day
 ---
 
 Primeira versão foi publicada!
