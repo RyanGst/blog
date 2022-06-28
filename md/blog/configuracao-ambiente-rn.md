@@ -82,7 +82,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 ##### **1. Configuração manual:**
 
 
-Acesse a página do [Android Studi](https://developer.android.com/studio/) e clique no botão Download Android Studio (Versão que uso é `Android Studio Chipmunk | 2021.2.1 Patch 1 for Linux 64-bit`).
+Acesse a página do [Android Studio](https://developer.android.com/studio/) e clique no botão Download Android Studio (Versão que uso é `Android Studio Chipmunk | 2021.2.1 Patch 1 for Linux 64-bit`).
 
 Vá até a pasta de download e abra o arquivo tar.gz que deve possuir uma pasta "android-studio" dentro. Extraia essa pasta em um local de preferência (Ex.: ~/ ou /opt/).
 
