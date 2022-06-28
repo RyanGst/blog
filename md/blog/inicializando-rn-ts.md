@@ -11,11 +11,6 @@ thumbnailPhoto: /img/rn-ts.png
 canonicalUrl: https://ryangst.me/blog/inicializando-rn-ts
 ---
 
-# Inicializando um projeto React Native com Typescript
-
-Categoria: React Native
-Created: June 2, 2022 1:35 PM
-
 Typescript foi eleita a 5º linguagem mais amada por desenvolvedores profissionais de acordo com a pesquisa do [Stack Overflow](https://survey.stackoverflow.co/2022/#most-popular-technologies-language-prof), além de ter mais de [31 milhões de downloads semanais](https://www.npmjs.com/package/typescript) no NPM.
 
 Basicamente, [Typescript](https://www.typescriptlang.org/) é um `superset` Javascript com suporte a tipagem estática criada pela Microsoft, que nos permite ter uma relação ainda mais “íntima” com nosso editor **( ͡° ͜ʖ ͡°).** O código escrito é compilado para Javascript e roda em [qualquer plataforma](https://en.wikipedia.org/wiki/List_of_ECMAScript_engines) com suporte à JS.
