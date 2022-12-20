@@ -1,14 +1,17 @@
-import React from "react";
-import Head from "next/head";
-import { Footer } from "../components/Footer/Footer";
-import { globals } from "../globals";
-import { Header } from "../components/Header/Header";
-
 import type { AppProps } from "next/app";
+import Head from "next/head";
 import { useRouter } from "next/router";
+import React from "react";
+import { Footer } from "../components/Footer/Footer";
+import { Header } from "../components/Header/Header";
+import { globals } from "../globals";
+
+
+import Script from "next/script";
 
 import "terminal.css";
-import "../styles/base.css";
+
+import "../styles/base.scss";
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   const { asPath } = useRouter();
@@ -17,13 +20,13 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
     <div className="terminal">
       <Head>
         {globals.googleAnalyticsId && (
-          <script
+          <Script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${globals.googleAnalyticsId}`}
-          ></script>
+          ></Script>
         )}
         {globals.googleAnalyticsId && (
-          <script
+          <Script
             dangerouslySetInnerHTML={{
               __html: `
             window.dataLayer = window.dataLayer || [];
@@ -33,7 +36,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
             gtag('globals', '${globals.googleAnalyticsId}');
             `,
             }}
-          ></script>
+          ></Script>
         )}
       </Head>
 

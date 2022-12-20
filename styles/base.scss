@@ -1,6 +1,3 @@
-@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
-
-
 
 :root {
   --background-color: #201f1e;
@@ -13,6 +10,8 @@
   --code-bg-color: #1f1f1f;
   --font-stack: "Fira Code VF", monospace;
 }
+
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
 
 mark {
   background-color: var(--primary-dark-color);
