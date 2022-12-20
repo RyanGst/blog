@@ -12,9 +12,9 @@ const Home = (props: {
   posts: PostData[];
 }) => {
   return (
-    <div className="content">
+    <div className="container">
       <Head>
-        <title>Ryangst</title>
+        <title>ryangst</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
@@ -29,7 +29,7 @@ const Home = (props: {
         <p>
           Leia outros artigos que <code>acabaram de sair do forno:</code>
         </p>
-        <div className="post-card-container">
+        <div className="image-grid">
           {props.posts.map((post, j) => {
             return <PostCard post={post} key={j} />;
           })}

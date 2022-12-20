@@ -1,18 +1,25 @@
 import React from "react";
-import { Container, Header, Paragraph } from "./styles";
 
 export default function Banner() {
   return (
-    <Container>
+    <div>
       <div>
-        <Header className="font-mono mb-8 text-4xl lg:text-5xl text-white font-bold max-w-sm">
-          SEJA BEM VINDO!
-        </Header>
-        <Paragraph>
-          Sou <b>Ryan Lucas</b>, desenvolvedor <code>Javascript</code><br/> e aluno do curso de Análise e
-          Desenvolvimento de sistemas na FATEC-OU
-        </Paragraph>
+        <h1>
+          <mark>SEJA BEM VINDO!</mark>
+        </h1>
+        <p>
+          Olá, meu nome é Ryan e sou desenvolvedor de aplicações móveis. Tenho
+          experiência em frameworks como React Native e também em
+          desenvolvimento de módulos nativos para Android com Java. Atualmente,
+          estou me aprofundando no desenvolvimento de aplicações nativas usando
+          Kotlin e procuro oportunidades para aprimorar meus conhecimentos e
+          habilidades nesta área.
+          <br />
+          <br />
+          Além disso, gosto de ficar por dentro das últimas tendências e
+          tecnologias no desenvolvimento de aplicações mobile.
+        </p>
       </div>
-    </Container>
+    </div>
   );
 }

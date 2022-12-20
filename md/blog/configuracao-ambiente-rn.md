@@ -1,5 +1,6 @@
 ---
 title: Configuração Ambiente React Native
+subtitle: "Como configurar o ambiente de desenvolvimento para o React Native"
 published: true
 datePublished: 1655655988000
 author: Ryan Lucas

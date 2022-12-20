@@ -1,30 +1,28 @@
-import React from 'react';
-import { Author } from './Author';
-import { Markdown } from './Markdown';
-import { PostData } from '../loader';
-import { PostMeta } from './PostMeta';
+import React from "react";
+import { Markdown } from "./Markdown";
+import { PostData } from "../loader";
+import { PostMeta } from "./PostMeta";
 
 export const BlogPost: React.FunctionComponent<{ post: PostData }> = ({
   post,
 }) => {
   const { title, subtitle } = post;
   return (
-    <div className="blog-post">
+    <article className="container">
       <PostMeta post={post} />
       {post.bannerPhoto && (
-        <img className="blog-post-image" src={post.bannerPhoto} />
+        <img className="image" src={post.bannerPhoto} alt={title} />
       )}
 
-      <div className="blog-post-title">
+      <section>
         {title && <h1>{title}</h1>}
-        {subtitle && <h2>{subtitle}</h2>}
+        {subtitle && <i><u>"{subtitle}"</u></i>}
         <br />
-        <Author post={post} />
-      </div>
+      </section>
 
       <div className="blog-post-content">
         <Markdown source={post.content} />
       </div>
-    </div>
+    </article>
   );
 };

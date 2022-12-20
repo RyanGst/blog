@@ -1,16 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ryangst]]></title><description><![CDATA[Escrevo sobre tecnologia e coisas aleatórias.]]></description><link>https://alyssaphacker.com</link><image><url>https://alyssaphacker.com/icon.png</url><title>ryangst</title><link>https://alyssaphacker.com</link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 28 Jun 2022 14:40:33 GMT</lastBuildDate><atom:link href="https://alyssaphacker.com/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Invalid Date</pubDate><copyright><![CDATA[2022 Ryan Lucas]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[ryan.professional.md@gmail.com]]></managingEditor><webMaster><![CDATA[ryan.professional.md@gmail.com]]></webMaster><ttl>60</ttl><item><title><![CDATA[Inicializando um projeto React Native com Typescript]]></title><description><![CDATA[<h1 id="inicializandoumprojetoreactnativecomtypescript">Inicializando um projeto React Native com Typescript</h1>
-<p>Categoria: React Native
-Created: June 2, 2022 1:35 PM</p>
-<p>Typescript foi eleita a 5º linguagem mais amada por desenvolvedores profissionais de acordo com a pesquisa do <a href="https://survey.stackoverflow.co/2022/#most-popular-technologies-language-prof">Stack Overflow</a>, além de ter mais de <a href="https://www.npmjs.com/package/typescript">31 milhões de downloads semanais</a> no NPM.</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[ryangst]]></title><description><![CDATA[Escrevo sobre tecnologia e coisas aleatórias.]]></description><link>https://ryangst.me</link><image><url>https://ryangst.me/icon.png</url><title>ryangst</title><link>https://ryangst.me</link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 20 Dec 2022 00:10:51 GMT</lastBuildDate><atom:link href="https://ryangst.me/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Invalid Date</pubDate><copyright><![CDATA[2022 Ryan Lucas]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[ryan.professional.md@gmail.com]]></managingEditor><webMaster><![CDATA[ryan.professional.md@gmail.com]]></webMaster><ttl>60</ttl><item><title><![CDATA[Inicializando um projeto React Native com Typescript]]></title><description><![CDATA[<p>Typescript foi eleita a 5º linguagem mais amada por desenvolvedores profissionais de acordo com a pesquisa do <a href="https://survey.stackoverflow.co/2022/#most-popular-technologies-language-prof">Stack Overflow</a>, além de ter mais de <a href="https://www.npmjs.com/package/typescript">31 milhões de downloads semanais</a> no NPM.</p>
 <p>Basicamente, <a href="https://www.typescriptlang.org/">Typescript</a> é um <code>superset</code> Javascript com suporte a tipagem estática criada pela Microsoft, que nos permite ter uma relação ainda mais “íntima” com nosso editor <strong>( ͡° ͜ʖ ͡°).</strong> O código escrito é compilado para Javascript e roda em <a href="https://en.wikipedia.org/wiki/List_of_ECMAScript_engines">qualquer plataforma</a> com suporte à JS.</p>
 <h2 id="comandoparainicializao">Comando para inicialização:</h2>
 <pre><code class="bash language-bash">npx react-native init AwesomeTSProject --template react-native-template-typescript
 </code></pre>
-<p><img src="Inicializando%20um%20projeto%20React%20Native%20com%20Typescri%20f91f48d409d74d7eae219a3c158ba96f/Untitled.png" alt="Depois de rodar o comando, aguarde o bootstrap do projeto." /></p>
-<p>Depois de rodar o comando, aguarde o bootstrap do projeto.</p>
-<p>Depois de criado, a estrutura do projeto se parece com isso:</p>
-<p><img src="Inicializando%20um%20projeto%20React%20Native%20com%20Typescri%20f91f48d409d74d7eae219a3c158ba96f/Untitled%201.png" alt="Estrutura de arquivos do projeto." /></p>
-<p>Estrutura de arquivos do projeto.</p>
+<figure>
+<img style="scale: 0.85; max-width: 100%;"  src="/img/inicializando-rn-ts/bootstrap.png"/>
+<figcaption>Depois de rodar o comando, aguarde o bootstrap do projeto.</figcaption>
+</figure>
+<hr/>
 <h2 id="comorntypescriptseparece">Como RN + Typescript se parece?</h2>
 <p>Uma das vantagens é escrever tipagem estática para <code>estados</code> e <code>props</code> , o que vai disponibilizar </p>
 <p>checagem de tipos e autocomplete quando estivermos usando esse componente:</p>
@@ -35,19 +32,22 @@ const Section: React.FC&lt;SectionProps&gt; = ({children, title}) =&gt; {
 };
 </code></pre>
 <p>Agora que escrevemos nosso componente, podemos usá-lo em diferentes partes da nossa aplicação, como no próximo exemplo:</p>
-<p><img src="Inicializando%20um%20projeto%20React%20Native%20com%20Typescri%20f91f48d409d74d7eae219a3c158ba96f/Untitled%202.png" alt="Untitled" /></p>
+<p><img src="/img/inicializando-rn-ts/error-ts.png" alt="Error" /></p>
 <p>Quando não fornecemos um valor para a propriedade <code>title</code> recebemos um erro de sintaxe:</p>
-<p><code>Property 'title' is missing in type '{ children: string; }' but required in type 'SectionProps'.ts(2741)</code></p>
+<pre><code class="tsx language-tsx">Property 'title' is missing in type '{ children: string; }' but required in type 'SectionProps'.ts(2741)
+</code></pre>
 <p>Ou seja, o valor para título, que deve ser uma string está ausente, essa tipagem foi definida quando escrevemos a interface <code>SectionProps</code>.</p>
 <p>Um erro parecido pode ser observado quando tentamos fornecer um valor de outro tipo para essa propriedade: </p>
-<p><img src="Inicializando%20um%20projeto%20React%20Native%20com%20Typescri%20f91f48d409d74d7eae219a3c158ba96f/Untitled%203.png" alt="Untitled" /></p>
+<p><small>
+<img width="550" src="/img/inicializando-rn-ts/error-ts-2.png"/>
+</small></p>
 <pre><code class="tsx language-tsx">const App = () =&gt; {
   return (
     &lt;SafeAreaView&gt;
       &lt;Section title="React Native com Typescript"&gt;
         React Native é um framework para contrução de apps multiplataforma
       &lt;/Section&gt;
-            {/*Type 'number' is not assignable to type 'string'*/}
+       {/* Type 'number' is not assignable to type 'string' */}
       &lt;Section title={5}&gt;
         React Native é um framework para contrução de apps multiplataforma
       &lt;/Section&gt;
@@ -60,9 +60,9 @@ const Section: React.FC&lt;SectionProps&gt; = ({children, title}) =&gt; {
 <ul>
 <li><a href="https://www.typescriptlang.org/pt/docs/handbook/react.html">React + Typescript - Documentação Oficial</a></li>
 <li><a href="https://reactnative.dev/docs/typescript">Usando React Native e Typescript</a></li>
-<li><a href="https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html">Typescript do zer</a>o</li>
+<li><a href="https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html">Typescript do zero</a></li>
 </ul>
-<p>Obrigado por ler até aqui! Sinta-se livre para me mandar uma mensagem no <a href="https://www.linkedin.com/in/ryan-lucas-machado/">Linkedinho</a>!</p>]]></description><link>https://alyssaphacker.com/blog/inicializando-rn-ts</link><guid isPermaLink="true">https://alyssaphacker.com/blog/inicializando-rn-ts</guid><category><![CDATA[React Native]]></category><dc:creator><![CDATA[Ryan Lucas]]></dc:creator><pubDate>Tue, 28 Jun 2022 14:40:15 GMT</pubDate></item><item><title><![CDATA[Configuração Ambiente React Native]]></title><description><![CDATA[<h1 id="configuraoambientereactnativenolinux">Configuração Ambiente React Native no Linux</h1>
+<p>Obrigado por ler até aqui! Sinta-se livre para me mandar uma mensagem no <a href="https://www.linkedin.com/in/ryan-lucas-machado/">Linkedinho</a>!</p>]]></description><link>https://ryangst.me/blog/inicializando-rn-ts</link><guid isPermaLink="true">https://ryangst.me/blog/inicializando-rn-ts</guid><category><![CDATA[React Native]]></category><dc:creator><![CDATA[Ryan Lucas]]></dc:creator><pubDate>Tue, 28 Jun 2022 14:40:15 GMT</pubDate></item><item><title><![CDATA[Configuração Ambiente React Native]]></title><description><![CDATA[<h1 id="configuraoambientereactnativenolinux">Configuração Ambiente React Native no Linux</h1>
 <p>O objetivo desse documento é cobrir um passo a passo de como configurar as ferramentas de desenvolvimento e debug para React Native.</p>
 <blockquote>
   <p>Para configurar o seu sistema para executar aplicações React Native iOS é necessário um sistema com MacOS. <strong>Atualmente, não é possível configurar um ambiente IOS no Windows/Linux de maneira nativa</strong></p>
@@ -109,7 +109,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 </code></pre>
 <h4 id="baixandoeinstalandoandroidstudio"><strong>Baixando e instalando Android Studio:</strong></h4>
 <h5 id="1configuraomanual"><strong>1. Configuração manual:</strong></h5>
-<p>Acesse a página do <a href="https://developer.android.com/studio/">Android Studi</a> e clique no botão Download Android Studio (Versão que uso é <code>Android Studio Chipmunk | 2021.2.1 Patch 1 for Linux 64-bit</code>).</p>
+<p>Acesse a página do <a href="https://developer.android.com/studio/">Android Studio</a> e clique no botão Download Android Studio (Versão que uso é <code>Android Studio Chipmunk | 2021.2.1 Patch 1 for Linux 64-bit</code>).</p>
 <p>Vá até a pasta de download e abra o arquivo tar.gz que deve possuir uma pasta "android-studio" dentro. Extraia essa pasta em um local de preferência (Ex.: ~/ ou /opt/).</p>
 <p>Após a extração, adicione a seguinte variável ambiente (assim como foi feito no passo anterior) no seu sistema:</p>
 <pre><code class="bash language-bash">export PATH=$PATH:/caminho-da-instalacao/bin
@@ -126,9 +126,9 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 <pre><code class="bash language-bash">flatpak install flathub com.google.AndroidStudio
 </code></pre>
 <h4 id="wizarddeinstalao"><strong>Wizard de instalação:</strong></h4>
-<p>Os passos para instalação estão disponíveis em: https://developer.android.com/studio/videos/studio-install-linux.mp4?hl=pt-br</p>]]></description><link>https://alyssaphacker.com/blog/configuracao-ambiente-rn</link><guid isPermaLink="true">https://alyssaphacker.com/blog/configuracao-ambiente-rn</guid><category><![CDATA[React Native]]></category><dc:creator><![CDATA[Ryan Lucas]]></dc:creator><pubDate>Sun, 19 Jun 2022 16:26:28 GMT</pubDate></item><item><title><![CDATA[Versão 1.0 publicada!]]></title><description><![CDATA[<p>Primeira versão foi publicada!</p>
+<p>Os passos para instalação estão disponíveis em: https://developer.android.com/studio/videos/studio-install-linux.mp4?hl=pt-br</p>]]></description><link>https://ryangst.me/blog/configuracao-ambiente-rn</link><guid isPermaLink="true">https://ryangst.me/blog/configuracao-ambiente-rn</guid><category><![CDATA[React Native]]></category><dc:creator><![CDATA[Ryan Lucas]]></dc:creator><pubDate>Sun, 19 Jun 2022 16:26:28 GMT</pubDate></item><item><title><![CDATA[Versão 1.0 publicada!]]></title><description><![CDATA[<p>Primeira versão foi publicada!</p>
 <blockquote>
   <p>Uma longa viagem começa com um único passo.</p>
   <p>— Lao-Tsé</p>
 </blockquote>
-<p>Em breve novas postagens!</p>]]></description><link>https://alyssaphacker.com/blog/first-day</link><guid isPermaLink="true">https://alyssaphacker.com/blog/first-day</guid><category><![CDATA[Novidades]]></category><dc:creator><![CDATA[Ryan Lucas]]></dc:creator><pubDate>Sat, 13 Nov 2021 19:17:48 GMT</pubDate></item></channel></rss>
+<p>Em breve novas postagens!</p>]]></description><link>https://ryangst.me/blog/first-day</link><guid isPermaLink="true">https://ryangst.me/blog/first-day</guid><category><![CDATA[Novidades]]></category><dc:creator><![CDATA[Ryan Lucas]]></dc:creator><pubDate>Sat, 13 Nov 2021 19:17:48 GMT</pubDate></item></channel></rss>

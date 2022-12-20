@@ -1,19 +1,27 @@
-import React from 'react';
-import { globals } from '../../globals';
-import { Container, FooterLinks, FooterName } from './styles';
+import React from "react";
+import { globals } from "../../globals";
 
 export const Footer: React.FC = () => (
-  <Container >
-    <FooterName>{`© ${globals.yourName} ${new Date().getFullYear()}`}</FooterName>
-    <div className="flex-spacer" />
-    <FooterLinks href="https://github.com/RyanGst">
-      <img src="/img/gh.svg" alt="GitHub" height="40" width="40" />
-    </FooterLinks>
-    <FooterLinks href="https://twitter.com/ryangst_">
-      <img src="/img/twitter.svg" alt="GitHub" height="40" width="40" />
-    </FooterLinks>
-    <FooterLinks href="/rss.xml">
-      <img src="/img/rss-white.svg" alt="RSS Feed" height="30" width="30" />
-    </FooterLinks>
-  </Container>
+  <section className="container">
+    <hr/>
+    <div className="image-grid">
+      <h2>{`© ${globals.yourName} ${new Date().getFullYear()}`}</h2>
+      <div className="row">
+        <a href={globals.githubUrl} style={{ border: "none" }}>
+          <img
+            src="/img/gh.svg"
+            alt="GitHub"
+            width="24"
+            height="24"
+          />
+        </a>
+        <a href={globals.twitterUrl} style={{ border: "none" }}>
+          <img src="/img/twitter.svg" alt="Twitter" width="24" height="24" />
+        </a>
+        <a href="/rss.xml" style={{ border: "none" }}>
+          <img src="/img/rss-white.svg" alt="RSS Feed" width="24" height="24" />
+        </a>
+      </div>
+    </div>
+  </section>
 );

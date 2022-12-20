@@ -21,15 +21,13 @@ Basicamente, [Typescript](https://www.typescriptlang.org/) é um `superset` Java
 npx react-native init AwesomeTSProject --template react-native-template-typescript
 ```
 
-<small>
-<img height="500" src="/img/inicializando-rn-ts/bootstrap.png"/>
+<figure>
+<img style="scale: 0.85; max-width: 100%;"  src="/img/inicializando-rn-ts/bootstrap.png"/>
 <figcaption>Depois de rodar o comando, aguarde o bootstrap do projeto.</figcaption>
-</small>
+</figure>
 
-Depois de criado, a estrutura do projeto se parece com isso:
 
-![Estrutura de arquivos do projeto.](/img/inicializando-rn-ts/fs.png)
-
+<hr/>
 
 ## Como RN + Typescript se parece?
 
@@ -65,7 +63,9 @@ Agora que escrevemos nosso componente, podemos usá-lo em diferentes partes da n
 
 Quando não fornecemos um valor para a propriedade `title` recebemos um erro de sintaxe:
 
-`Property 'title' is missing in type '{ children: string; }' but required in type 'SectionProps'.ts(2741)`
+```tsx
+Property 'title' is missing in type '{ children: string; }' but required in type 'SectionProps'.ts(2741)
+```
 
 Ou seja, o valor para título, que deve ser uma string está ausente, essa tipagem foi definida quando escrevemos a interface `SectionProps`.
 
