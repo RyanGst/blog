@@ -9,17 +9,17 @@ export const Footer: React.FC = () => (
       <div className="row">
         <a href={globals.githubUrl} style={{ border: "none" }}>
           <img
-            src="/img/gh.svg"
+            src="/img/icons/gh.svg"
             alt="GitHub"
             width="24"
             height="24"
           />
         </a>
         <a href={globals.twitterUrl} style={{ border: "none" }}>
-          <img src="/img/twitter.svg" alt="Twitter" width="24" height="24" />
+          <img src="/img/icons/twitter.svg" alt="Twitter" width="24" height="24" />
         </a>
         <a href="/rss.xml" style={{ border: "none" }}>
-          <img src="/img/rss-white.svg" alt="RSS Feed" width="24" height="24" />
+          <img src="/img/icons/rss-white.svg" alt="RSS Feed" width="24" height="24" />
         </a>
       </div>
     </div>

@@ -26,7 +26,7 @@ mark {
   grid-template-rows: auto;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(calc(var(--page-width) / 12), 1fr)
+                  minmax(calc(var(--page-width) / 12), 1fr)
   );
 
   grid-auto-rows: 1fr;
@@ -66,3 +66,4 @@ code {
 pre code {
   overflow-x: hidden;
 }
+

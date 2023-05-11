@@ -1,9 +1,10 @@
 import Head from "next/head";
 import { generateRSS } from "../rssUtil";
-import { Markdown } from "../components/Markdown";
-import { PostData, loadBlogPosts, loadMarkdownFile } from "../loader";
+import { loadBlogPosts, loadMarkdownFile, PostData } from "../loader";
 import { PostCard } from "../components/PostCard";
-import Banner from "../components/Banner/Banner";
+import Banner from "./components/Banner/Banner";
+
+import styles from "./styles/index.module.css";
 
 const Home = (props: {
   introduction: string;
@@ -12,30 +13,33 @@ const Home = (props: {
   posts: PostData[];
 }) => {
   return (
-    <div className="container">
-      <Head>
-        <title>ryangst</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div>
-        <Banner />
-        <div className="introduction">
-          <Markdown source={props.introduction} />
+    <>
+      <div className={`container ${styles.show}`}>
+        <Head>
+          <title>ryangst</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <div>
+          <Banner />
         </div>
-      </div>
 
-      <div className="section">
-        <h2>Você pode gostar: </h2>
-        <p>
-          Leia outros artigos que <code>acabaram de sair do forno:</code>
-        </p>
-        <div className="image-grid">
-          {props.posts.map((post, j) => {
-            return <PostCard post={post} key={j} />;
-          })}
+        <div
+          className="section"
+          style={{
+            marginTop: "1rem",
+            gap: "1rem",
+          }}
+        >
+          <mark>you might like:</mark>
+          <p>Read last posts:</p>
+          <div className="image-grid">
+            {props.posts.map((post, j) => {
+              return <PostCard post={post} key={j} />;
+            })}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
