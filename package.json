@@ -1,6 +1,6 @@
 {
   "name": "blog2",
-  "version": "4.2.0",
+  "version": "2.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -13,6 +13,9 @@
     "cz": "cz",
     "prepare": "husky install",
     "lint": "eslint ."
+  },
+  "engines": {
+    "node": ">=20.x"
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",
