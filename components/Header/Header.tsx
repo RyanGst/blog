@@ -28,7 +28,12 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute }) => {
                 <a className={`menu-item  ${activeRoute("/")}`}>Home</a>
               </Link>{" "}
             </li>
-           {/*  <li>
+            <li>
+              <Link href="/links">
+                <a className={`menu-item  ${activeRoute("/links")}`}>Links</a>
+              </Link>{" "}
+            </li>
+            {/*  <li>
               <Link href="/blog">
                 <a className={`menu-item ${activeRoute("/blog")}`}>Blog</a>
               </Link>{" "}

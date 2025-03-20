@@ -6,9 +6,14 @@ interface SocialLinks {
 
 const socialLinks: SocialLinks[] = [
   {
-    url: "https://twitter.com/ryangst_",
+    url: "https://www.linkedin.com/in/ryangst/",
+    icon: "/img/icons/linkedin.svg",
+    name: "LinkedIn",
+  },
+  {
+    url: "https://x.com/ryangst_",
     icon: "/img/icons/twitter.svg",
-    name: "Twitter",
+    name: "X",
   },
   {
     url: "https://github.com/RyanGst",
@@ -16,15 +21,17 @@ const socialLinks: SocialLinks[] = [
     name: "GitHub",
   },
   {
-    url: "https://www.linkedin.com/in/ryangst/",
-    icon: "/img/icons/linkedin.svg",
-    name: "LinkedIn",
-  },
-  {
-    url: "https://discord.gg/kZvMu8uk",
+    url: "https://discord.gg/dm4UJWY4tK",
     icon: "/img/icons/discord.svg",
     name: "Discord",
-  }
+  },
+  {
+    url: "https://www.youtube.com/@ryangst_",
+    icon: "/img/icons/youtube.svg",
+    name: "YouTube",
+  },
+
+
 ];
 
 export default socialLinks;
