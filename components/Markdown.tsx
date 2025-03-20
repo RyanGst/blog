@@ -1,11 +1,11 @@
 import React from 'react';
 import Code from './Code';
-import { MarkdownHooks } from 'react-markdown';
+import MarkdownComponent from 'react-markdown';
 
 export const Markdown: React.FC<{ source: string }> = (props) => {
   return (
     <div style={{ width: '100%' }} className="devii-markdown">
-      <MarkdownHooks
+      <MarkdownComponent
         components={{
           code({ node, ...props }) {
             console.log(props);
@@ -14,7 +14,7 @@ export const Markdown: React.FC<{ source: string }> = (props) => {
         }}
       >
         {props.source}
-      </MarkdownHooks>
+      </MarkdownComponent>
     </div>
   );
 };
