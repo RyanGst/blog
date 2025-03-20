@@ -25,9 +25,21 @@ export const LOGO_IMAGE = {
 
 export const SOCIALS: SocialObjects = [
   {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/ryangst/",
+    linkTitle: `${SITE.title} on LinkedIn`,
+    active: true,
+  },
+  {
     name: "Github",
     href: "https://github.com/ryangst",
     linkTitle: ` ${SITE.title} on Github`,
+    active: true,
+  },
+  {
+    name: "Discord",
+    href: "https://discord.gg/dm4UJWY4tK",
+    linkTitle: `${SITE.title} on Discord`,
     active: true,
   },
   {
@@ -42,12 +54,7 @@ export const SOCIALS: SocialObjects = [
     linkTitle: `${SITE.title} on Instagram`,
     active: false,
   },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/ryangst/",
-    linkTitle: `${SITE.title} on LinkedIn`,
-    active: true,
-  },
+
   {
     name: "Mail",
     href: "mailto:yourmail@gmail.com",
