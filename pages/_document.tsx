@@ -9,6 +9,7 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           {/* Step 5: Output the styles in the head  */}
+          {/* @ts-ignore */}
           {this.props.children}
         </Head>
         <body>
