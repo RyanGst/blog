@@ -1,0 +1,16 @@
+.git
+.gitignore
+Dockerfile
+README.md
+*.log
+_build/
+node_modules/
+.eslintignore
+.eslintrc.js
+.idea/
+.vscode/
+.vercel
+.astro
+node_modules
+.git
+*.md
