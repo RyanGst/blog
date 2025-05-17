@@ -6,6 +6,6 @@ services:
     ports:
       - 4321:4321
     working_dir: /app
-    command: npm run dev
+    command: node dist/server/entry.mjs
     volumes:
-      - ./:/app
+      - ./dist:/app/dist

@@ -1,0 +1,12 @@
+FROM node:24-alpine AS runtime
+WORKDIR /app
+
+COPY . .
+
+RUN npm install --omit=dev
+RUN npm run build
+
+ENV HOST=0.0.0.0
+ENV PORT=4321
+EXPOSE 4321
+CMD node ./dist/server/entry.mjs
