@@ -34,3 +34,5 @@ pnpm-debug.log*
 !.yarn/versions
 .pnp.*
 .vercel
+
+.idea/
