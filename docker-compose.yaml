@@ -34,7 +34,6 @@ services:
     working_dir: /app
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.app.rule=Host(`ryangst.click`)"
       - "traefik.http.routers.app.entrypoints=websecure"
       - "traefik.http.routers.app.tls.certresolver=myresolver"
       - "traefik.http.routers.app.service=app"
