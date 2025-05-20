@@ -39,6 +39,7 @@ jobs:
         with:
           context: .
           push: true
+          file: docker/Dockerfile
           tags: |
             ghcr.io/ryangst/blog:latest
             ghcr.io/ryangst/blog:${{ github.sha }}
