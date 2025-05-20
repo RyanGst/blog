@@ -16,8 +16,6 @@ services:
       - "traefik.http.routers.app.service=app"
       - "traefik.http.services.app.loadbalancer.server.port=4321"
     command: node dist/server/entry.mjs
-    volumes:
-      - ../dist:/app/dist
     networks:
       - dokploy-network
 
