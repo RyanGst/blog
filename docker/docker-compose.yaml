@@ -25,10 +25,13 @@ services:
     volumes:
       - letsencrypt:/letsencrypt
       - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - web
+
   app:
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ..
+      dockerfile: docker/Dockerfile
     ports:
       - 4321:4321
     working_dir: /app
@@ -40,7 +43,13 @@ services:
       - "traefik.http.services.app.loadbalancer.server.port=4321"
     command: node dist/server/entry.mjs
     volumes:
-      - ./dist:/app/dist
+      - ../dist:/app/dist
+    networks:
+      - web
 
 volumes:
   letsencrypt:
+
+networks:
+  web:
+    driver: bridge

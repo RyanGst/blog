@@ -12,7 +12,7 @@ FROM base AS build-deps
 RUN pnpm install --shamefully-hoist
 
 FROM build-deps AS build
-COPY . .
+COPY ../ .
 RUN pnpm run build
 
 FROM base AS runtime
