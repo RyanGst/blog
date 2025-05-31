@@ -1,7 +1,7 @@
 import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
-  website: "https://astro-paper.pages.dev/", // replace this with your deployed domain
+  website: "https://blog.ryanmac.dev/",
   author: "Ryan Machado",
   desc: "Exploring the intersections of technology, creativity, and innovation, this blog offers deep dives into the world of FullStack development with a special focus on TypeScript, Node.js, React, and Vue. Join me on a journey through cutting-edge web and mobile app development, sharing insights, tutorials, and industry trends.",
   title: "ryangst",
