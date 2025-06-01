@@ -36,8 +36,6 @@ const pagination = getPagination({
   posts: sortedPosts,
   page: slug,
 });
-
-// console.log(post);
 ---
 
 {post ? <PostDetails post={post} /> : <Posts {...pagination} />}
