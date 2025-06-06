@@ -4,7 +4,7 @@
     "@astrojs/node": "^9.2.1",
     "@astrojs/react": "^4.2.7",
     "@astrojs/rss": "^4.0.11",
-    "@astrojs/sitemap": "^3.4.0",
+    "@astrojs/sitemap": "^3.4.1",
     "@astrojs/tailwind": "^6.0.2",
     "@astrojs/vercel": "^8.1.4",
     "@resvg/resvg-js": "^2.6.2",

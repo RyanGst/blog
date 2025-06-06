@@ -3,7 +3,7 @@ import type { Site, SocialObjects } from "./types";
 export const SITE: Site = {
   website: "https://blog.ryanmac.dev/",
   author: "Ryan Machado",
-  desc: "Exploring the intersections of technology, creativity, and innovation, this blog offers deep dives into the world of FullStack development with a special focus on TypeScript, Node.js, React, and Vue. Join me on a journey through cutting-edge web and mobile app development, sharing insights, tutorials, and industry trends.",
+  desc: "A blog at the crossroads of technology and creativity, diving deep into FullStack development with a strong focus on TypeScript, Node.js, React, and Vue. Follow along for hands-on tutorials, practical insights, and thoughtful commentary on the latest trends in web and mobile development. Whether you're building for the browser or the backend, this space is dedicated to helping developers grow, explore, and stay ahead in the ever-evolving tech landscape.",
   title: "ryangst",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
