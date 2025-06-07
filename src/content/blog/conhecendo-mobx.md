@@ -9,6 +9,7 @@ draft: false
 tags:
   - MobX
   - React
+  - javascript
 description: Como o MobX ajuda a manter o estado da sua aplicação atualizado e consistente
 ---
 

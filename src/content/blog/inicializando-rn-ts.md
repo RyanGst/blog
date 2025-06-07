@@ -1,7 +1,7 @@
 ---
 author: Ryan Machado
 pubDatetime: 2022-06-28T14:40:15.000Z
-modDatetime: 2022-06-28T14:40:15.000Z
+modDatetime: 2025-06-06T14:40:15.000Z
 title: 🇧🇷Inicializando um projeto React Native com Typescript
 slug: inicializando-rn-ts
 featured: true
@@ -9,6 +9,7 @@ draft: false
 tags:
   - RN
   - React
+  - typescript
 description: Aprenda a inicializar um projeto React Native com Typescript.
 ---
 

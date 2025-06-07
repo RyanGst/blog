@@ -9,6 +9,9 @@ draft: false
 tags:
   - RN
   - Android
+  - react-native
+  - android
+  - ios
 description: Configuração do ambiente de desenvolvimento React Native no Linux.
 ---
 
