@@ -1,0 +1,26 @@
+{
+  "name": "ryangst - Full Stack Developer Blog",
+  "short_name": "ryangst",
+  "description": "A blog at the crossroads of technology and creativity, diving deep into FullStack development with a strong focus on TypeScript, Node.js, React, and Vue.",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "theme_color": "#1e293b",
+  "background_color": "#0f172a",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "lang": "pt-BR",
+  "orientation": "portrait-primary"
+}
