@@ -9,7 +9,6 @@ import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SOCIALS } from "@config";
-import WeatherInfo from "@components/WeatherInfo";
 
 const posts = await getCollection("blog");
 
@@ -129,10 +128,6 @@ const howOld = new Date().getFullYear() - 2002;
           ></path>
         </svg>
       </LinkButton>
-    </div>
-
-    <div class="all-posts-btn-wrapper">
-      <WeatherInfo client:load />
     </div>
   </main>
 
