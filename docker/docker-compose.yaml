@@ -6,16 +6,14 @@ services:
       context: ..
       dockerfile: docker/Dockerfile
     ports:
-      - 4321:4321
-    working_dir: /app
+      - 80:80
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.app.rule=Host(`blog.ryanmac.dev`)"
       - "traefik.http.routers.app.entrypoints=websecure"
       - "traefik.http.routers.app.tls.certresolver=myresolver"
       - "traefik.http.routers.app.service=app"
-      - "traefik.http.services.app.loadbalancer.server.port=4321"
-    command: node dist/server/entry.mjs
+      - "traefik.http.services.app.loadbalancer.server.port=80"
     networks:
       - dokploy-network
 

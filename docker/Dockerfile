@@ -15,11 +15,15 @@ FROM build-deps AS build
 COPY ../ .
 RUN pnpm run build
 
-FROM base AS runtime
-COPY --from=build-deps /app/node_modules ./node_modules
-COPY --from=build /app/dist ./dist
+# Use nginx to serve static files
+FROM nginx:alpine AS runtime
 
-ENV HOST=0.0.0.0
-ENV PORT=4321
-EXPOSE 4321
-CMD node ./dist/server/entry.mjs
+# Copy built static files to nginx html directory
+COPY --from=build /app/dist /usr/share/nginx/html
+
+# Copy custom nginx configuration
+COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]

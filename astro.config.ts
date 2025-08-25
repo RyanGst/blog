@@ -6,8 +6,6 @@ import remarkCollapse from "remark-collapse";
 import remarkToc from "remark-toc";
 import { SITE } from "./src/config";
 
-import node from "@astrojs/node";
-
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
@@ -16,7 +14,11 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
     react(),
-    sitemap(),
+    sitemap({
+      changefreq: 'weekly',
+      priority: 0.7,
+      lastmod: new Date(),
+    }),
   ],
 
   markdown: {
@@ -42,9 +44,5 @@ export default defineConfig({
   },
 
   scopedStyleStrategy: "where",
-  output: "server",
-
-  adapter: node({
-    mode: "standalone",
-  }),
+  output: "static",
 });
