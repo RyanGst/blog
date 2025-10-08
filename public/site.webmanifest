@@ -1,7 +1,7 @@
 {
   "name": "ryangst - Full Stack Developer Blog",
   "short_name": "ryangst",
-  "description": "A blog at the crossroads of technology and creativity, diving deep into FullStack development with a strong focus on TypeScript, Node.js, React, and Vue.",
+  "description": "I talk about Node.js, Bun, React, and Vue.",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
