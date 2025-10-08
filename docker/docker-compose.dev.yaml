@@ -28,18 +28,18 @@ services:
     networks:
       - web
 
-  app:
+  web:
     build:
       context: ..
       dockerfile: docker/Dockerfile
     ports:
-      - 8080:80
+      - 8080:8080
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.app.entrypoints=websecure"
-      - "traefik.http.routers.app.tls.certresolver=myresolver"
-      - "traefik.http.routers.app.service=app"
-      - "traefik.http.services.app.loadbalancer.server.port=80"
+      - "traefik.http.routers.web.entrypoints=websecure"
+      - "traefik.http.routers.web.tls.certresolver=myresolver"
+      - "traefik.http.routers.web.service=web"
+      - "traefik.http.services.web.loadbalancer.server.port=8080"
     networks:
       - web
 
