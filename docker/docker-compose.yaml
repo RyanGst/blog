@@ -5,7 +5,7 @@ services:
       dockerfile: docker/Dockerfile
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.web.rule=Host(`blog.ryanmac.dev`)"
+      - "traefik.http.routers.web.rule=Host(`ryanmac.dev`)"
       - "traefik.http.routers.web.entrypoints=websecure"
       - "traefik.http.routers.web.tls.certresolver=myresolver"
       - "traefik.http.routers.web.service=web"
